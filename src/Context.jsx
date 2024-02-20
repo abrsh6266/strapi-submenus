@@ -1,8 +1,6 @@
-import { useContext } from "react";
-const { createContext } = require("react");
-const { useState } = require("react");
+import { useContext, createContext, useState } from "react";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const closeSideBar = () => {
@@ -17,4 +15,6 @@ export const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
-export const useGlobalContext = useContext(AppContext);
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
