@@ -1,8 +1,11 @@
 import { useGlobalContext } from "./Context";
+import Navbar from "./Navbar";
 
 const App = () => {
   const {isSidebarOpen} =useGlobalContext()
   console.log(isSidebarOpen)
-  return <h2>Strapi Starter</h2>;
+  return <main>
+    <Navbar />
+  </main>;
 };
 export default App;

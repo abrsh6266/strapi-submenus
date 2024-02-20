@@ -1,5 +1,5 @@
-const SubMenu = () => {
-  return <div>SubMenu</div>;
+const Submenu = () => {
+  return <div>Submenu</div>;
 };
 
-export default SubMenu;
+export default Submenu;
