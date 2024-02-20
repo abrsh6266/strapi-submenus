@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 const { Children } = require("react");
 const { createContext } = require("react");
 const { useState } = require("react");
@@ -17,3 +19,4 @@ export const AppProvider = ({ Children }) => {
     </AppContext.Provider>
   );
 };
+export const useGlobalContext = useContext(AppContext);
