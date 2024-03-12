@@ -3,14 +3,14 @@ import { useContext, createContext, useState } from "react";
 export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const closeSideBar = () => {
+  const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
-  const openSideBar = () => {
+  const openSidebar = () => {
     setIsSidebarOpen(true);
   };
   return (
-    <AppContext.Provider value={{ isSidebarOpen, closeSideBar, openSideBar }}>
+    <AppContext.Provider value={{ isSidebarOpen, closeSidebar, openSidebar }}>
       {children}
     </AppContext.Provider>
   );
